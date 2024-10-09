@@ -1,0 +1,36 @@
+{
+    "active": true,
+    "hubId": "date-weekday-mapper",
+    "name": "Date to Weekday Mapper",
+    "schema": "skill-1.0.0",
+    "version": "1.0.0",
+    "description": "Maps each date of a given month and year to its corresponding weekday",
+    "author": "@rmrfslashbin",
+    "author_url": "https://github.com/rmrfslashbin",
+    "license": "MIT",
+    "setup_args": {},
+    "examples": [
+        {
+            "prompt": "What are the weekdays for October 2024?",
+            "call": "{\"year\": 2024, \"month\": 10}"
+        },
+        {
+            "prompt": "Give me the day-to-weekday mapping for December 2025",
+            "call": "{\"year\": 2025, \"month\": 12}"
+        }
+    ],
+    "entrypoint": {
+        "file": "handler.js",
+        "params": {
+            "year": {
+                "description": "The year (e.g., 2024)",
+                "type": "number"
+            },
+            "month": {
+                "description": "The month (1-12)",
+                "type": "number"
+            }
+        }
+    },
+    "imported": true
+}
